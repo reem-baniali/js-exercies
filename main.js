@@ -325,13 +325,14 @@ function shorterString(str1, str2, str3, str4, str5) {
   const fourthStrLength = str4.length;
   const fifthStrLength = str5.length;
 
-  if (firstStrLength < secondStrLength &&firstStrLength < thirdStrLength &&firstStrLength < fourthStrLength && firstStrLength < fifthStrLength)return str1;
-   if(secondStrLength<thirdStrLength && secondStrLength<fourthStrLength && secondStrLength<fifthStrLength) return str2;
-   if(thirdStrLength<fourthStrLength && thirdStrLength<fifthStrLength) return str3;
-   if (fourthStrLength<fifthStrLength) return str4;
+  if (firstStrLength <= secondStrLength &&firstStrLength <= thirdStrLength &&firstStrLength <= fourthStrLength && firstStrLength <= fifthStrLength)return str1;
+   if(secondStrLength<=thirdStrLength && secondStrLength<=fourthStrLength && secondStrLength<=fifthStrLength) return str2;
+   if(thirdStrLength<=fourthStrLength && thirdStrLength<=fifthStrLength) return str3;
+   if (fourthStrLength<=fifthStrLength) return str4;
    return str5;
 }
 console.log(shorterString("air","tr","car","github","by"));
+console.log(shorterString("by","tr","car","air","github"));
 
 /*
 14
